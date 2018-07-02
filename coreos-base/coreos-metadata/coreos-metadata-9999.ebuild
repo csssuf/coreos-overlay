@@ -7,12 +7,12 @@ CROS_WORKON_PROJECT="coreos/coreos-metadata"
 CROS_WORKON_LOCALNAME="coreos-metadata"
 CROS_WORKON_REPO="git://github.com"
 
-UPDATE_SSH_KEYS_VERSION="0.1.2"
+UPDATE_SSH_KEYS_VERSION="0.2.0"
 
 if [[ ${PV} == 9999 ]]; then
 	KEYWORDS="~amd64 ~arm64"
 else
-	CROS_WORKON_COMMIT="254093086f15d8380cc0e7f7e58e8e5d43b379a3" # v1.0.6
+	CROS_WORKON_COMMIT="db4b14bd3b87d54575449e61f1e61aae22bff11d" # v2.0.0
 	KEYWORDS="amd64 arm64"
 fi
 
@@ -59,8 +59,6 @@ ansi_term-0.11.0
 arrayref-0.3.4
 arrayvec-0.4.7
 atty-0.2.8
-base64-0.6.0
-base64-0.8.0
 base64-0.9.0
 bitflags-0.5.0
 bitflags-0.7.0
@@ -88,7 +86,7 @@ crossbeam-utils-0.3.2
 digest-0.7.2
 dtoa-0.4.2
 either-1.5.0
-error-chain-0.11.0
+error-chain-0.12.0
 fake-simd-0.1.2
 foreign-types-0.3.2
 foreign-types-shared-0.1.1
@@ -138,7 +136,7 @@ nodrop-0.1.12
 num-integer-0.1.36
 num-traits-0.2.2
 num_cpus-1.8.0
-openssh-keys-0.2.2
+openssh-keys-0.3.0
 openssl-0.9.24
 openssl-sys-0.9.28
 percent-encoding-1.0.1
@@ -241,7 +239,7 @@ ws2_32-sys-0.2.1
 xml-rs-0.3.6
 "
 # not listed:
-# update-ssh-keys-0.1.2
+# update-ssh-keys-0.2.0
 
 SRC_URI="$(cargo_crate_uris ${CRATES})
 https://github.com/coreos/update-ssh-keys/archive/v${UPDATE_SSH_KEYS_VERSION}.tar.gz -> update-ssh-keys-${UPDATE_SSH_KEYS_VERSION}.tar.gz
